@@ -31,15 +31,4 @@
 
 ## Credits
 
-## Notes for Challenge
-
-nouns = person; bike; docking_station;
-verbs = use_bike; release_bike; check_bike
-
-|    Objects     |     Messages    |
-|----------------|-----------------|
-| person         |                 |
-| bike           | check_bike      |
-| good_bike      | use_bike        |
-| docking_station| release_bike    |
 

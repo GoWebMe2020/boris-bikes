@@ -1,0 +1,11 @@
+nouns = person; bike; docking_station;
+verbs = use_bike; release_bike; check_bike
+
+|    Objects     |     Messages    |
+|----------------|-----------------|
+| person         |                 |
+| bike           | check_bike?     |
+| docking_station| release_bike    |
+
+Bike <-- working? --> true/false
+DockingStation <-- release_bike --> a Bike
