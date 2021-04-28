@@ -23,6 +23,11 @@ describe DockingStation do
             expect { subject.release_bike }.to raise_error 'No bike'
         end
     end
-    
+    describe '#docking_bike' do
+    it 'raises an error if no dock' do
+        subject.docking_bike(Bike.new)
+        expect { subject.docking_bike Bike.new }.to raise_error 'No dock'
+        end
+    end
 end
 
