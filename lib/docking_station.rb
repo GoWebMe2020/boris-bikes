@@ -1,5 +1,3 @@
-
-
 class DockingStation
     attr_reader :bike
     def docking_bike(bike)
