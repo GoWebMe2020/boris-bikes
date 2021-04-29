@@ -1,3 +1,5 @@
+require 'bike'
+
 class DockingStation
     attr_reader :bike
     def bike
@@ -10,11 +12,5 @@ class DockingStation
     def release_bike
         fail 'No bike' unless @bike
         @bike
-    end
-end
-
-class Bike
-    def working?
-        true
     end
 end
