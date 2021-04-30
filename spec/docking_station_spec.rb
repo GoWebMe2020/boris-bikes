@@ -4,7 +4,7 @@ describe DockingStation do
 
   describe 'initialization' do
     subject { DockingStation.new }
-    let(:bike) { Bike.new }
+    let(:bike) { double(:bike) }
     it 'has a default capacity' do
       described_class::DEFAULT_CAPACITY.times do
         subject.dock(bike)
@@ -21,7 +21,7 @@ describe DockingStation do
 
   describe '#release_bike' do
     it "creates a bike object" do
-      bike = Bike.new
+      bike = double(:bike)
       subject.dock(bike)
       expect(subject.release_bike).to eq bike
     end
@@ -31,7 +31,7 @@ describe DockingStation do
     end
 
     it "does not release a broken bike" do
-      bike = Bike.new
+      bike = double(:bike)
       bike.report_broken
       subject.dock(bike)
       expect(subject.release_bike).to eq('Bike is broken')
@@ -40,14 +40,14 @@ describe DockingStation do
 
   describe '#dock' do
     it "docks a bike" do
-      bike = Bike.new
+      bike = double(:bike)
       expect(subject.dock(bike)).to eq [bike]
     end
 
     it 'raises an error when dock is full' do
       station = DockingStation.new 40
-      station.capacity.times { station.dock(Bike.new) }
-      expect {station.dock(Bike.new)}.to raise_error('Dock at capacity')
+      station.capacity.times { station.dock(double(:bike)) }
+      expect {station.dock(double(:bike))}.to raise_error('Dock at capacity')
     end
   end
 end
