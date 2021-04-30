@@ -7,6 +7,7 @@
 ## Build status
 * Day 1 - Chapter 7 Complete
 * Day 2 - Chapter 13 Complete
+* Day 3 - Chapter 17 Complete
 
 ## Code style
 * Test-driven development
@@ -17,14 +18,15 @@
 ## Tech/framework used
 * VS Code
 * GitHub
+* Rspec
 
 ## Built with
 * Ruby
 
 ## Installation
 * Provide step by step series of examples and explanations about how to get a development env running.
-* rspec
-* bundle
+* install rspec
+* install bundle
 
 ## Tests
 * The fist test was written to determine if rspec works
@@ -37,7 +39,7 @@
 ## If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
 
 ## Credits
-### Jenny Bell
-### James McMullen
-
+* Jenny Bell
+* James McMullen
+* Charlie Casserly
 
