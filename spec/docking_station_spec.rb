@@ -21,18 +21,19 @@ describe DockingStation do
 
   describe '#release_bike' do
     it "creates a bike object" do
-      bike = double(:bike)
+      bike = double("bike", :working? => true)
       subject.dock(bike)
-      expect(subject.release_bike).to eq bike
+      released_bike = subject.release_bike
+      expect(released_bike).to be_working
     end
+    
 
     it "raises an error when no bike available" do
       expect {subject.release_bike}.to raise_error('No bike available')
     end
 
     it "does not release a broken bike" do
-      bike = double(:bike)
-      bike.report_broken
+      bike = double("bike", :working? => false)
       subject.dock(bike)
       expect(subject.release_bike).to eq('Bike is broken')
     end

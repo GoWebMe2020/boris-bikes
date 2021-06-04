@@ -1,7 +1,7 @@
-require_relative './bike.rb'
+# require_relative './bike.rb'
 
 class DockingStation
-  attr_reader :bikes
+  attr_accessor :bikes
   attr_reader :capacity
 
 
